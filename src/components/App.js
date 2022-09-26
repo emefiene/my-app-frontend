@@ -15,7 +15,13 @@ function App() {
       setPhysiciansData(data)
     })
 
-   
+    fetch("http://localhost:9292/patients")
+    .then(res => res.json())
+    .then(data => {
+      setPatientsData(data)
+    })
+
+  },[])
   return (
     <div>
       <Home/>
