@@ -1,9 +1,12 @@
 import React from 'react'
+import PatientsList from './PatientsList'
 
-const PatientContainer = (props) => {
-    console.log(props)
+const PatientContainer = ({patientsData}) => {
+ 
   return (
-    <div>PatientContainer</div>
+    <div>
+      {patientsData.map((patientsObj,index) => <PatientsList patientsObj={patientsObj} key={index}/>)}
+    </div>
   )
 }
 
