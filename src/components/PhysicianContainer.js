@@ -1,8 +1,10 @@
 import React from 'react'
-
-const PhysicianContainer = () => {
+import PhysiciansList from './PhysiciansList'
+const PhysicianContainer = ({physiciansData}) => {
   return (
-    <div>PhysicianContainer</div>
+    <div>
+    {physiciansData.map((physiciansObj,index) => <PhysiciansList physiciansObj={physiciansObj} key={index}/>)}
+    </div>
   )
 }
 
