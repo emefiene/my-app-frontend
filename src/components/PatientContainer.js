@@ -1,6 +1,7 @@
 import React from 'react'
 
-const PatientContainer = () => {
+const PatientContainer = (props) => {
+    console.log(props)
   return (
     <div>PatientContainer</div>
   )
